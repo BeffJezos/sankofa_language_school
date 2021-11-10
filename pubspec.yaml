@@ -19,15 +19,19 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  auto_size_text: ^2.1.0
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2
+  splashscreen: ^1.2.0
+  url_launcher: ^5.4.2
   font_awesome_flutter:
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  audioplayers: ^0.20.1
 
 
 # For information on the generic Dart part of this file, see the
@@ -41,7 +45,56 @@ flutter:
   # the material Icons class.
   uses-material-design: true
   assets:
-    - images/
+    - assets/alpha/
+    - assets/farben/
+    - assets/fragewoerterundrichtungsangaben/
+    - assets/haeufigetwisaetze/
+    - assets/konsonanten/
+    - assets/selbstlaute/
+    - assets/lebensmittel/
+    - assets/wochentage/
+    - assets/zahlen/
+    - assets/zeitangaben/
+    - assets/tiere/
+    - assets/images/thesac-sanky.jpg
+    - assets/images/Sankofa_Sprachkurs.png
+    - assets/images/Lingala.jpeg
+    - assets/images/Swahili.jpeg
+    - assets/images/unnamed.png
+    - assets/images/KomplettesQuizBild.jpeg
+    - assets/images/FarbenBild.jpeg
+    - assets/images/ZahlenBild.jpeg
+    - assets/images/LebensmittelBild.jpeg
+    - assets/images/WochenTageBild.jpeg
+    - assets/images/KonsonantenBild.jpeg
+    - assets/images/SelbstlauteBild.jpeg
+    - assets/images/HaeufigeTwiSaetzeBild.jpeg
+    - assets/images/FragewoerterBild.jpeg
+    - assets/images/ZeitangabenBild.jpeg
+    - assets/images/TiereBild.jpeg
+    - assets/images/okay.jpeg
+    - assets/images/good.jpeg
+    - assets/images/success.jpeg
+    - assets/images/SankofaNeuesBild1.jfif
+    - assets/images/SankofaNeuesBild2.jfif
+    - assets/images/SankofaNeuesBild3.jfif
+    - assets/images/SankofaNeuesBild4.jfif
+    - assets/images/SankofaNeuesBild5.jfif
+    - assets/images/SankofaNeuesBild6.jfif
+    - assets/images/SankofaNeuesBild7.jfif
+    - assets/quize/farbenquiz.json
+    - assets/quize/fragewoerterundrichtungsangabenquiz.json
+    - assets/quize/haeufigetwisaetzequiz.json
+    - assets/quize/komplettesquiz.json
+    - assets/quize/konsonantenquiz.json
+    - assets/quize/lebensmittelquiz.json
+    - assets/quize/numberquiz.json
+    - assets/quize/selbstlautequiz.json
+    - assets/quize/tierequiz.json
+    - assets/quize/wochentagequiz.json
+    - assets/quize/zeitangabenquiz.json
+
+
   fonts:
     - family: Circular
       fonts:
