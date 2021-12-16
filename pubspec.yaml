@@ -27,6 +27,9 @@ dependencies:
   splashscreen: ^1.2.0
   url_launcher: ^5.4.2
   font_awesome_flutter:
+  getwidget: ^2.0.4
+  simple_gradient_text: ^1.2.2
+  assorted_layout_widgets: ^5.2.1
 
 dev_dependencies:
   flutter_test:
@@ -47,15 +50,19 @@ flutter:
   assets:
     - assets/alpha/
     - assets/farben/
+    - assets/flaggen/
     - assets/fragewoerterundrichtungsangaben/
     - assets/haeufigetwisaetze/
     - assets/konsonanten/
     - assets/selbstlaute/
     - assets/lebensmittel/
+    - assets/quiz_inhalte/
     - assets/wochentage/
     - assets/zahlen/
     - assets/zeitangaben/
     - assets/tiere/
+    - assets/widgetbilder/
+    - images/akwasi.jpg
     - assets/images/thesac-sanky.jpg
     - assets/images/Sankofa_Sprachkurs.png
     - assets/images/Lingala.jpeg
@@ -82,17 +89,49 @@ flutter:
     - assets/images/SankofaNeuesBild5.jfif
     - assets/images/SankofaNeuesBild6.jfif
     - assets/images/SankofaNeuesBild7.jfif
-    - assets/quize/farbenquiz.json
-    - assets/quize/fragewoerterundrichtungsangabenquiz.json
-    - assets/quize/haeufigetwisaetzequiz.json
-    - assets/quize/komplettesquiz.json
-    - assets/quize/konsonantenquiz.json
-    - assets/quize/lebensmittelquiz.json
-    - assets/quize/numberquiz.json
-    - assets/quize/selbstlautequiz.json
-    - assets/quize/tierequiz.json
-    - assets/quize/wochentagequiz.json
-    - assets/quize/zeitangabenquiz.json
+    - assets/images/Instagram.png
+    - assets/images/Instagram2.png
+    - assets/images/Instagram3.jfif
+    - assets/images/Instagram4.png
+    - assets/images/Instagram5.jfif
+    - assets/images/Instagram6.png
+    - assets/images/Instagram7.png
+    - assets/images/SankofaVogel.png
+    - assets/images/GoogleDrive.jfif
+    - assets/images/GoogleDrive2.png
+    - assets/images/Deutschland.png
+    - assets/quiz_inhalte/farbenquiz.json
+    - assets/quiz_inhalte/fragewoerterundrichtungsangabenquiz.json
+    - assets/quiz_inhalte/haeufigetwisaetzequiz.json
+    - assets/quiz_inhalte/komplettesquiz.json
+    - assets/quiz_inhalte/konsonantenquiz.json
+    - assets/quiz_inhalte/lebensmittelquiz.json
+    - assets/quiz_inhalte/numberquiz.json
+    - assets/quiz_inhalte/selbstlautequiz.json
+    - assets/quiz_inhalte/tierequiz.json
+    - assets/quiz_inhalte/wochentagequiz.json
+    - assets/quiz_inhalte/zeitangabenquiz.json
+    - assets/learning/alphabet.json
+    - assets/learning/colours.json
+    - assets/learning/consonants.json
+    - assets/learning/interrogatives.json
+    - assets/learning/numbers.json
+    - assets/learning/sentences.json
+    - assets/learning/times.json
+    - assets/learning/vowels.json
+    - assets/learning/weekdays.json
+    - assets/images/icons/alphabeticon.png
+    - assets/images/icons/coloursicon.png
+    - assets/images/icons/interrogativesicon.png
+    - assets/images/icons/sentencesicon.png
+    - assets/images/icons/consonantsicon.png
+    - assets/images/icons/vowelsicon.png
+    - assets/images/icons/weekdaysicon.png
+    - assets/images/icons/numbersicon.png
+    - assets/images/icons/timesicon.png
+    - assets/images/icons/foodsicon.png
+    - assets/images/icons/animalsicon.png
+    - assets/images/icons/quizicon.png
 
 
   fonts:
@@ -103,6 +142,11 @@ flutter:
           weight: 100
         - asset: fonts/CircularStd-Bold.ttf
           weight: 500
+    - family: Lucian
+      fonts:
+        - asset: fonts/Lucian Schoenschrift CAT.ttf
+
+
 
 
   # To add assets to your application, add an assets section, like this:
