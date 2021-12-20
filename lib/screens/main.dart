@@ -64,9 +64,10 @@ class HomePage extends StatelessWidget {
 }
 
 // TODO: 1. Introscreen
-// TODO: 2. Name-Display
+
 // TODO: 3. Verschiedene Sprachen (bald verfügbar Screen)
-// TODO: 4. Einstellungen
+
 // Todo: 5. Fortsetzen auf der HomePage
-// TODO: 6. Lern Animation
-// Todo: 7. Quiz
+
+// TODO: Quiz läuft ab ->  QuizHome
+// TODO: Quiz abbrechen -> QuizHome

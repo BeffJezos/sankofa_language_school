@@ -184,7 +184,7 @@ class _HomeScreenState extends State<HomeScreen> {
   ];
 
   List<String> descriptions = [
-    "Lerne die Grundlagen von Twi kennen",
+    "Lerne die Buchstaben von Twi kennen",
     "Eine kleine Einführung in die Welt der Farben",
     "Lerne die notwendigen Fragewörter kennen",
     "Die wichtigsten Sätze aus dem Alltag",

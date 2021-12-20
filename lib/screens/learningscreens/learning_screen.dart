@@ -2,11 +2,13 @@ import 'dart:async';
 import 'dart:convert';
 import 'dart:math';
 
+import 'package:pet_ui/screens/main.dart';
 import 'package:pet_ui/screens/mainscreens/drawer_screen.dart';
 import 'package:pet_ui/screens/quiz_screens/results_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:pet_ui/screens/mainscreens/home_screen.dart';
+import 'package:audioplayers/audioplayers.dart';
 
 class Json extends StatelessWidget {
   // accept the langname as a parameter
@@ -120,6 +122,7 @@ class _quizpageState extends State<quizpage> {
     genrandomarray();
     super.initState();
     changeOpacityFirst();
+    player.play(mydata[2][i.toString()]);
     changeOpacitySecond();
   }
 
@@ -132,17 +135,7 @@ class _quizpageState extends State<quizpage> {
 
   void repeataudio() {
     setState(() {
-      if (j < 20) {
-        i = random_array[j];
-        j++;
-      } else {
-        Navigator.of(context).pushReplacement(MaterialPageRoute(
-          builder: (context) => Resultpage(marks: marks),
-        ));
-      }
-      btncolor["a"] = Color.fromRGBO(250, 139, 134, 1);
-      btncolor["b"] = Color.fromRGBO(255, 171, 147, 1);
-      disableAnswer = false;
+      player.play(mydata[2][i.toString()]);
     });
   }
 
@@ -159,7 +152,7 @@ class _quizpageState extends State<quizpage> {
       child: MaterialButton(
         onPressed: () => buttonfunctionality(k),
         child: Text(
-          mydata[1][i.toString()][k],
+          "Wiederholen",
           textAlign: TextAlign.center,
           style: TextStyle(
             color: Color(0xFFF3F2F8),
@@ -183,6 +176,8 @@ class _quizpageState extends State<quizpage> {
     Timer(Duration(seconds: 2), nextquestion);
   }
 
+  final player = AudioCache();
+
   Widget choicebutton2(String k) {
     return Padding(
       padding: EdgeInsets.symmetric(
@@ -192,7 +187,7 @@ class _quizpageState extends State<quizpage> {
       child: MaterialButton(
         onPressed: () => buttonfunctionality2(k),
         child: Text(
-          mydata[1][i.toString()][k],
+          "Weiter",
           textAlign: TextAlign.center,
           style: TextStyle(
             color: Color(0xFFF3F2F8),
@@ -206,8 +201,9 @@ class _quizpageState extends State<quizpage> {
         highlightColor: Color.fromRGBO(255, 171, 147, 1),
         minWidth: 200.0,
         height: 45.0,
-        shape:
-            RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(20.0),
+        ),
       ),
     );
   }
@@ -217,13 +213,16 @@ class _quizpageState extends State<quizpage> {
       if (j < 20) {
         i = random_array[j];
         j++;
+        opacity1 = 1.0;
+        opacity2 = 0.0;
+        changeOpacityThird();
+        changeOpacityFourth();
+        player.play(mydata[2][i.toString()]);
       } else {
         Navigator.of(context).pushReplacement(MaterialPageRoute(
-          builder: (context) => Resultpage(marks: marks),
+          builder: (context) => HomePage(),
         ));
       }
-      btncolor["a"] = Color.fromRGBO(250, 139, 134, 1);
-      btncolor["b"] = Color.fromRGBO(255, 171, 147, 1);
     });
   }
 
@@ -235,7 +234,6 @@ class _quizpageState extends State<quizpage> {
       setState(() {
         opacity1 = opacity1 == 0.0 ? 1.0 : 0.0;
         opacity1 = opacity1 == 0.0 ? 0.0 : 0.0;
-        changeOpacityFirst();
       });
     });
   }
@@ -245,8 +243,24 @@ class _quizpageState extends State<quizpage> {
       setState(() {
         opacity2 = opacity2 == 0.0 ? 1.0 : 1.0;
         opacity2 = opacity2 == 0.0 ? 0.0 : 1.0;
+      });
+    });
+  }
 
-        changeOpacitySecond();
+  changeOpacityThird() {
+    Future.delayed(Duration(seconds: 1), () {
+      setState(() {
+        opacity1 = opacity1 == 1.0 ? 1.0 : 0.0;
+        opacity1 = opacity1 == 0.0 ? 0.0 : 0.0;
+      });
+    });
+  }
+
+  changeOpacityFourth() {
+    Future.delayed(Duration(seconds: 3), () {
+      setState(() {
+        opacity2 = opacity2 == 0.0 ? 0.0 : 1.0;
+        opacity2 = opacity2 == 1.0 ? 1.0 : 1.0;
       });
     });
   }
@@ -292,7 +306,7 @@ class _quizpageState extends State<quizpage> {
                     children: [
                       AnimatedOpacity(
                         opacity: opacity1,
-                        duration: Duration(seconds: 2),
+                        duration: Duration(seconds: 1),
                         child: Center(
                           child: Text(
                             mydata[0][i.toString()],
@@ -310,7 +324,7 @@ class _quizpageState extends State<quizpage> {
                         duration: Duration(seconds: 2),
                         child: Center(
                           child: Text(
-                            mydata[2][i.toString()],
+                            mydata[1][i.toString()],
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               fontSize: 48.0,

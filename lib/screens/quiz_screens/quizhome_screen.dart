@@ -28,9 +28,9 @@ class _QuizHomeState extends State<QuizHome> {
   List<String> des = [
     "Ein Quiz über die Farben der Sprache Twi.",
     "Ein Quiz über die Fragenwörter und Richtungsangaben der Sprache Twi.",
-    "Ein Quiz über die Konsonanten der Sprache Twi.",
-    "Ein Quiz über die Selbstlaute der Sprache Twi.",
     "Ein Quiz über häufige Twi Sätze.",
+    "Ein Quiz über die Konsonanten der Spr Sprache Twi.",
+    "Ein Quiz über die Selbstlaute derache Twi.",
     "Ein Quiz über die Wochentage der Sprache Twi.",
     "Ein Quiz über die Zahlen der Sprache Twi.",
     "Ein Quiz über die Zeitangaben der Sprache Twi.",

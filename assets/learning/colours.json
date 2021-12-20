@@ -22,88 +22,6 @@
     "20": "Weiß"
   },
   {
-    "1": {
-      "a": "Erneut vorlesen",
-      "b": "Gemerkt und Weiter"
-    },
-    "2": {
-      "a": "Erneut vorlesen",
-      "b": "Gemerkt und Weiter"
-    },
-    "3": {
-      "a": "Erneut vorlesen",
-      "b": "Gemerkt und Weiter"
-    },
-    "4": {
-      "a": "Erneut vorlesen",
-      "b": "Gemerkt und Weiter"
-    },
-    "5": {
-      "a": "Erneut vorlesen",
-      "b": "Gemerkt und Weiter"
-    },
-    "6": {
-      "a": "Erneut vorlesen",
-      "b": "Gemerkt und Weiter"
-    },
-    "7": {
-      "a": "Erneut vorlesen",
-      "b": "Gemerkt und Weiter"
-    },
-    "8": {
-      "a": "Erneut vorlesen",
-      "b": "Gemerkt und Weiter"
-    },
-    "9": {
-      "a": "Erneut vorlesen",
-      "b": "Gemerkt und Weiter"
-    },
-    "10": {
-      "a": "Erneut vorlesen",
-      "b": "Gemerkt und Weiter"
-    },
-    "11": {
-      "a": "Erneut vorlesen",
-      "b": "Gemerkt und Weiter"
-    },
-    "12": {
-      "a": "Erneut vorlesen",
-      "b": "Gemerkt und Weiter"
-    },
-    "13": {
-      "a": "Erneut vorlesen",
-      "b": "Gemerkt und Weiter"
-    },
-    "14": {
-      "a": "Erneut vorlesen",
-      "b": "Gemerkt und Weiter"
-    },
-    "15": {
-      "a": "Erneut vorlesen",
-      "b": "Gemerkt und Weiter"
-    },
-    "16": {
-      "a": "Erneut vorlesen",
-      "b": "Gemerkt und Weiter"
-    },
-    "17": {
-      "a": "Erneut vorlesen",
-      "b": "Gemerkt und Weiter"
-    },
-    "18": {
-      "a": "Erneut vorlesen",
-      "b": "Gemerkt und Weiter"
-    },
-    "19": {
-      "a": "Erneut vorlesen",
-      "b": "Gemerkt und Weiter"
-    },
-    "20": {
-      "a": "Erneut vorlesen",
-      "b": "Gemerkt und Weiter"
-    }
-  },
-  {
     "1": "sika kɔkɔɔ",
     "2": "akokɔsrade",
     "3": "ahaban mono",
@@ -115,7 +33,7 @@
     "9": "nsonso",
     "10": "memen",
     "11": "beredum/afasebiri",
-    "12": "type",
+    "12": "dwetɛ",
     "13": "tuntum",
     "14": "kɔkɔɔ",
     "15": "bibire",
@@ -124,5 +42,27 @@
     "18": "akokɔsrade",
     "19": "ahaban mono",
     "20": "ﬁtaa/fufuo"
+  },
+  {
+    "1": "farben/gold.mp3",
+    "2": "farben/gelb.mp3",
+    "3": "farben/grun.mp3",
+    "4": "farben/weis.mp3",
+    "5": "farben/schwarz.mp3",
+    "6": "farben/rot.mp3",
+    "7": "farben/blau.mp3",
+    "8": "farben/braun.mp3",
+    "9": "farben/grau.mp3",
+    "10": "farben/pink.mp3",
+    "11": "farben/lila.mp3",
+    "12": "farben/silber.mp3",
+    "13": "farben/schwarz.mp3",
+    "14": "farben/rot.mp3",
+    "15": "farben/blau.mp3",
+    "16": "farben/braun.mp3",
+    "17": "farben/gold.mp3",
+    "18": "farben/gelb.mp3",
+    "19": "farben/grun.mp3",
+    "20": "farben/weis.mp3"
   }
 ]
