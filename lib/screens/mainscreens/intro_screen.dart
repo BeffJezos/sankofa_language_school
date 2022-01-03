@@ -29,7 +29,7 @@ class _IntroScreenState extends State<IntroScreen> {
                   decoration: BoxDecoration(
                     shape: BoxShape.rectangle,
                     image: new DecorationImage(
-                      image: new AssetImage('images/Sankofa_Sprachkurs.png'),
+                      image: new AssetImage('images/launch_image.png'),
                       fit: BoxFit.fill,
                     ),
                   ),

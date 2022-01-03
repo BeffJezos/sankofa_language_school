@@ -8,8 +8,8 @@ const kTitleStyle = TextStyle(
 
 const kNormalStyle = TextStyle(
   color: Colors.white,
-  fontSize: 19.5,
-  fontWeight: FontWeight.w300,
+  fontSize: 20,
+  fontWeight: FontWeight.bold,
 );
 
 const kAuswahlStyle = TextStyle(

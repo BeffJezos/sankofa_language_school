@@ -14,12 +14,7 @@
     "12": "Wie lautet die Farbe für Silber?",
     "13": "Wie lautet die Farbe für Schwarz?",
     "14": "Wie lautet die Farbe für Rot?",
-    "15": "Wie lautet die Farbe für Blau?",
-    "16": "Wie lautet die Farbe für Braun?",
-    "17": "Wie lautet die Farbe für Gold?",
-    "18": "Wie lautet die Farbe für Gelb?",
-    "19": "Wie lautet die Farbe für Grün?",
-    "20": "Wie lautet die Farbe für Weiß?"
+    "15": "Wie lautet die Farbe für Blau?"
   },
   {
     "1": {
@@ -81,26 +76,6 @@
     "15": {
       "a": "bibire",
       "b": "beredum/afasebiri"
-    },
-    "16": {
-      "a": "nsonso",
-      "b": "dodoeɛ"
-    },
-    "17": {
-      "a": "bibire",
-      "b": "sika kɔkɔɔ"
-    },
-    "18": {
-      "a": "memen",
-      "v": "akokɔsradeɛ"
-    },
-    "19": {
-      "a": "tuntum",
-      "b": "ahaban mono"
-    },
-    "20": {
-      "a": "ﬁtaa/fufuo",
-      "b": "nsonso"
     }
   },
   {
@@ -118,11 +93,6 @@
     "12": "dwetɛ",
     "13": "tuntum",
     "14": "kɔkɔɔ",
-    "15": "bibire",
-    "16": "dodoeɛ",
-    "17": "sika kɔkɔɔ",
-    "18": "akokɔsrade",
-    "19": "ahaban mono",
-    "20": "ﬁtaa/fufuo"
+    "15": "bibire"
   }
 ]

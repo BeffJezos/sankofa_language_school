@@ -10,30 +10,20 @@ import 'package:flutter/services.dart';
 import 'package:pet_ui/screens/mainscreens/home_screen.dart';
 import 'package:audioplayers/audioplayers.dart';
 
-class Json extends StatelessWidget {
+class SecondJson extends StatelessWidget {
   // accept the langname as a parameter
 
-  String topicname;
+  String secondtopicname;
 
-  Json(this.topicname);
+  SecondJson(this.secondtopicname);
 
   String assettoload;
 
   setasset() {
-    if (topicname == "Farben") {
-      assettoload = "assets/learning/colours.json";
-    } else if (topicname == "Fragewörter") {
-      assettoload = "assets/learning/interrogatives.json";
-    } else if (topicname == "Häufige Twi Sätze") {
-      assettoload = "assets/learning/sentences.json";
-    } else if (topicname == "Konsonanten") {
-      assettoload = "assets/learning/consonants.json";
-    } else if (topicname == "Selbstlaute") {
-      assettoload = "assets/learning/vowels.json";
-    } else if (topicname == "Wochentage") {
-      assettoload = "assets/learning/weekdays.json";
-    } else if (topicname == "Zeitangaben") {
-      assettoload = "assets/learning/times.json";
+    if (secondtopicname == "Alphabet") {
+      assettoload = "assets/learning/alphabet.json";
+    } else if (secondtopicname == "Zahlen") {
+      assettoload = "assets/learning/numbers.json";
     }
   }
 
@@ -102,9 +92,9 @@ class _quizpageState extends State<quizpage> {
     var distinctIds = [];
     var rand = new Random();
     for (int i = 0;;) {
-      distinctIds.add(rand.nextInt(25) + 1);
+      distinctIds.add(rand.nextInt(41) + 1);
       random_array = distinctIds.toSet().toList();
-      if (random_array.length < 25) {
+      if (random_array.length < 41) {
         continue;
       } else {
         break;
@@ -118,8 +108,7 @@ class _quizpageState extends State<quizpage> {
     genrandomarray();
     super.initState();
     changeOpacityFirst();
-    player.play(mydata[2][i.toString()]);
-    changeOpacitySecond();
+    player.play(mydata[1][i.toString()]);
   }
 
   @override
@@ -131,7 +120,7 @@ class _quizpageState extends State<quizpage> {
 
   void repeataudio() {
     setState(() {
-      player.play(mydata[2][i.toString()]);
+      player.play(mydata[1][i.toString()]);
     });
   }
 
@@ -169,7 +158,7 @@ class _quizpageState extends State<quizpage> {
   }
 
   void buttonfunctionality2(String k) {
-    Timer(Duration(seconds: 1), nextquestion);
+    Timer(Duration(seconds: 0), nextquestion);
   }
 
   final player = AudioCache();
@@ -209,11 +198,9 @@ class _quizpageState extends State<quizpage> {
       if (j < 20) {
         i = random_array[j];
         j++;
-        opacity1 = 1.0;
-        opacity2 = 0.0;
-        changeOpacityThird();
-        changeOpacityFourth();
-        player.play(mydata[2][i.toString()]);
+        opacity1 = 0.0;
+        player.play(mydata[1][i.toString()]);
+        changeOpacitySecond();
       } else {
         Navigator.of(context).pushReplacement(MaterialPageRoute(
           builder: (context) => HomePage(),
@@ -222,41 +209,21 @@ class _quizpageState extends State<quizpage> {
     });
   }
 
-  double opacity1 = 1.0;
-  double opacity2 = 0.0;
+  double opacity1 = 0.0;
 
   changeOpacityFirst() {
     Future.delayed(Duration(seconds: 1), () {
       setState(() {
-        opacity1 = opacity1 == 0.0 ? 1.0 : 0.0;
-        opacity1 = opacity1 == 0.0 ? 0.0 : 0.0;
+        opacity1 = opacity1 == 0.0 ? 1.0 : 1.0;
+        opacity1 = opacity1 == 0.0 ? 0.0 : 1.0;
       });
     });
   }
 
   changeOpacitySecond() {
-    Future.delayed(Duration(seconds: 2), () {
-      setState(() {
-        opacity2 = opacity2 == 0.0 ? 1.0 : 1.0;
-        opacity2 = opacity2 == 0.0 ? 0.0 : 1.0;
-      });
-    });
-  }
-
-  changeOpacityThird() {
     Future.delayed(Duration(seconds: 1), () {
       setState(() {
-        opacity1 = opacity1 == 1.0 ? 1.0 : 0.0;
-        opacity1 = opacity1 == 0.0 ? 0.0 : 0.0;
-      });
-    });
-  }
-
-  changeOpacityFourth() {
-    Future.delayed(Duration(seconds: 3), () {
-      setState(() {
-        opacity2 = opacity2 == 0.0 ? 0.0 : 1.0;
-        opacity2 = opacity2 == 1.0 ? 1.0 : 1.0;
+        opacity1 = opacity1 == 1.0 ? 1.0 : 1.0;
       });
     });
   }
@@ -302,25 +269,10 @@ class _quizpageState extends State<quizpage> {
                     children: [
                       AnimatedOpacity(
                         opacity: opacity1,
-                        duration: Duration(seconds: 1),
+                        duration: Duration(milliseconds: 10),
                         child: Center(
                           child: Text(
                             mydata[0][i.toString()],
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              fontSize: 48.0,
-                              fontFamily: "Circular",
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                        ),
-                      ),
-                      AnimatedOpacity(
-                        opacity: opacity2,
-                        duration: Duration(seconds: 2),
-                        child: Center(
-                          child: Text(
-                            mydata[1][i.toString()],
                             textAlign: TextAlign.center,
                             style: TextStyle(
                               fontSize: 48.0,

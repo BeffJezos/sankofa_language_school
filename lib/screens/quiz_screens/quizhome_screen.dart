@@ -173,9 +173,6 @@ class _QuizHomeState extends State<QuizHome> {
     return Scaffold(
       body: Column(
         children: [
-          SizedBox(
-            height: 20,
-          ),
           SafeArea(
             child: Container(
               margin: EdgeInsets.symmetric(horizontal: 20),
@@ -201,6 +198,7 @@ class _QuizHomeState extends State<QuizHome> {
                     style: TextStyle(
                         fontWeight: FontWeight.bold, color: Colors.black),
                   ),
+                  SizedBox(width: 60),
                 ],
               ),
             ),
@@ -208,7 +206,7 @@ class _QuizHomeState extends State<QuizHome> {
           Expanded(
             child: Center(
               child: SizedBox(
-                height: 600,
+                height: 680,
                 width: 400,
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),

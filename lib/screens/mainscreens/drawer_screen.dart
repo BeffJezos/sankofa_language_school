@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pet_ui/customcreations/configuration.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
+import 'package:pet_ui/screens/mainscreens/about_screen.dart';
 
 import 'account_screen.dart';
 import 'settings_screen.dart';
@@ -66,31 +67,39 @@ class _DrawerScreenState extends State<DrawerScreen> {
           ),
           Column(
             children: drawerItems
-                .map((element) => Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Row(
-                        children: [
-                          Container(
-                            width: 24,
-                            height: 24,
-                            decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              image: DecorationImage(
-                                  image: AssetImage(element['flag']),
-                                  fit: BoxFit.fill),
+                .map(
+                  (element) => Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Row(
+                      children: [
+                        Container(
+                          width: 24,
+                          height: 24,
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            image: DecorationImage(
+                              image: AssetImage(element['flag']),
+                              fit: BoxFit.fill,
+                              colorFilter: new ColorFilter.mode(
+                                  Colors.black.withOpacity(0.2),
+                                  BlendMode.dstATop),
                             ),
                           ),
-                          SizedBox(
-                            width: 10,
-                          ),
-                          Text(element['title'],
-                              style: TextStyle(
-                                  color: Colors.black,
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 18))
-                        ],
-                      ),
-                    ))
+                        ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        Text(
+                          element['title'],
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 18),
+                        ),
+                      ],
+                    ),
+                  ),
+                )
                 .toList(),
           ),
           Row(
@@ -128,6 +137,9 @@ class _DrawerScreenState extends State<DrawerScreen> {
                 width: 10,
               ),
               FlatButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, About.id);
+                },
                 child: Text(
                   'Über Sankofa',
                   style: TextStyle(

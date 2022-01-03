@@ -5,6 +5,7 @@ import 'dart:math';
 import 'results_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'quizhome_screen.dart';
 
 class Getjson extends StatelessWidget {
   // accept the langname as a parameter
@@ -266,8 +267,10 @@ class _quizpageState extends State<quizpage> {
                     title: Text('Möchtest du das Quiz beenden?'),
                     actions: <Widget>[
                       RaisedButton(
-                          child: Text('Ja'),
-                          onPressed: () => Navigator.of(context).pop(true)),
+                        child: Text('Ja'),
+                        onPressed: () =>
+                            Navigator.pushNamed(context, QuizHome.id),
+                      ),
                       RaisedButton(
                           child: Text('Nein'),
                           onPressed: () => Navigator.of(context).pop(false)),

@@ -106,7 +106,7 @@ class _VowelsState extends State<Vowels> {
                                 Padding(
                                   padding: const EdgeInsets.all(8.0),
                                   child: VowelsRectangleWithText(
-                                    functionality: 'e’',
+                                    functionality: 'a’',
                                     input: 'd',
                                   ),
                                 ),

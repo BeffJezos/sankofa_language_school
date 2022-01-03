@@ -19,6 +19,7 @@ import 'mainscreens/settings_screen.dart';
 import 'mainscreens/account_screen.dart';
 import 'mainscreens/home_screen.dart';
 import 'quiz_screens/quizhome_screen.dart';
+import 'learningscreens/learning_screen.dart';
 
 void main() {
   runApp(
@@ -44,12 +45,16 @@ void main() {
         Settings.id: (context) => Settings(),
         Account.id: (context) => Account(),
         QuizHome.id: (context) => QuizHome(),
+        HomePage.id: (context) => HomePage(),
+
+
       },
     ),
   );
 }
 
 class HomePage extends StatelessWidget {
+  static const String id = 'home_page';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -65,9 +70,9 @@ class HomePage extends StatelessWidget {
 
 // TODO: 1. Introscreen
 
-// TODO: 3. Verschiedene Sprachen (bald verfügbar Screen)
-
 // Todo: 5. Fortsetzen auf der HomePage
 
 // TODO: Quiz läuft ab ->  QuizHome
 // TODO: Quiz abbrechen -> QuizHome
+
+//TODO Lore Audio wurde zweimal benutzt bei Konsonanten

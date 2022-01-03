@@ -101,34 +101,6 @@ class _SettingsState extends State<Settings> {
             SizedBox(
               height: 40,
             ),
-            Row(
-              children: [
-                GradientText(
-                  "Mitteilungen",
-                  style: TextStyle(
-                    fontSize: 22,
-                    fontWeight: FontWeight.bold,
-                  ),
-                  colors: [
-                    Color.fromRGBO(252, 137, 173, 1),
-                    Color.fromRGBO(253, 129, 168, 1),
-                    Color.fromRGBO(255, 122, 163, 1),
-                    Color.fromRGBO(255, 88, 141, 1),
-                  ],
-                ),
-              ],
-            ),
-            Divider(
-              height: 15,
-              thickness: 2,
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            buildNotificationOptionRow("Neuigkeiten", true),
-            SizedBox(
-              height: 50,
-            ),
           ],
         ),
       ),
