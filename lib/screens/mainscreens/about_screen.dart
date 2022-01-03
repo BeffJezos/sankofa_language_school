@@ -129,7 +129,7 @@ class _AboutState extends State<About> {
             child: Container(
               margin: EdgeInsets.symmetric(horizontal: 24),
               padding: EdgeInsets.symmetric(horizontal: 22),
-              height: 80,
+              height: 100,
               child: Row(
                 children: [
                   Expanded(

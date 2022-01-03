@@ -148,6 +148,7 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
     );
   }
+
   @override
   Widget secondcard(
       String secondtopicname,
@@ -219,7 +220,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             child: AutoSizeText(
                               items,
                               style:
-                              TextStyle(color: Colors.white, fontSize: 20),
+                                  TextStyle(color: Colors.white, fontSize: 20),
                               maxLines: 2,
                             ),
                           ),
@@ -475,15 +476,15 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.all(12.0),
+                          padding: const EdgeInsets.all(16.0),
                           child: Align(
                             alignment: Alignment.topLeft,
-                            child: Text(
+                            child: AutoSizeText(
                               'Das Alphabet (Nsemfua)',
                               style: TextStyle(
-                                  fontSize: 24,
                                   fontWeight: FontWeight.bold,
                                   color: Colors.black),
+                              minFontSize: 26,
                             ),
                           ),
                         ),
@@ -494,10 +495,9 @@ class _HomeScreenState extends State<HomeScreen> {
                             child: ProgressBar(),
                           ),
                         ),
-                        Padding(
-                          padding: const EdgeInsets.all(12.0),
-                          child: Align(
-                            alignment: Alignment.topLeft,
+                        Align(
+                          alignment: Alignment.topLeft,
+                          child: FlatButton(
                             child: Container(
                               height: 35,
                               width: 80,
@@ -523,6 +523,9 @@ class _HomeScreenState extends State<HomeScreen> {
                                 ),
                               ),
                             ),
+                            onPressed: () {
+                              Navigator.pushNamed(context, QuizHome.id);
+                            },
                           ),
                         ),
                       ],

@@ -47,7 +47,7 @@ class _DrawerScreenState extends State<DrawerScreen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   GradientText(
-                    'Akwasi-Badu Aning',
+                    'SANKOFA',
                     style: TextStyle(fontWeight: FontWeight.bold),
                     colors: [
                       Color.fromRGBO(250, 139, 134, 1),

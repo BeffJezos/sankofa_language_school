@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pet_ui/screens/topicscreens/interrogatives.dart';
 import 'package:pet_ui/screens/topicscreens/vowels.dart';
-
+import 'package:splashscreen/splashscreen.dart';
 import 'mainscreens/intro_screen.dart';
 import 'mainscreens/drawer_screen.dart';
 import 'topicscreens/alphabet_screen.dart';
@@ -25,7 +25,7 @@ void main() {
   runApp(
     MaterialApp(
       title: 'Sankofa_language_school',
-      home: HomePage(),
+      home: MyApp(),
       theme: ThemeData(fontFamily: "Circular"),
       routes: {
         IntroScreen.id: (context) => IntroScreen(),
@@ -46,15 +46,34 @@ void main() {
         Account.id: (context) => Account(),
         QuizHome.id: (context) => QuizHome(),
         HomePage.id: (context) => HomePage(),
-
-
       },
     ),
   );
 }
 
+class MyApp extends StatefulWidget {
+  @override
+  _MyAppState createState() => new _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  @override
+  Widget build(BuildContext context) {
+    return new SplashScreen(
+      seconds: 3,
+      navigateAfterSeconds: new HomePage(),
+      image: new Image.asset('images/launch_image.png'),
+      backgroundColor: Colors.white,
+      styleTextUnderTheLoader: new TextStyle(),
+      photoSize: 100.0,
+      useLoader: false,
+    );
+  }
+}
+
 class HomePage extends StatelessWidget {
   static const String id = 'home_page';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
