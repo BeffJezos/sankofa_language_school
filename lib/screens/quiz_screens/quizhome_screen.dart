@@ -1,3 +1,6 @@
+import 'package:pet_ui/screens/main.dart';
+import 'package:pet_ui/screens/mainscreens/home_screen.dart';
+
 import 'quizpage_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:auto_size_text/auto_size_text.dart';
@@ -183,7 +186,7 @@ class _QuizHomeState extends State<QuizHome> {
                     padding: const EdgeInsets.all(8.0),
                     child: IconButton(
                       onPressed: () {
-                        Navigator.of(context).pop();
+                        Navigator.pushNamed(context, HomePage.id);
                       },
                       icon: Icon(
                         Icons.arrow_back,

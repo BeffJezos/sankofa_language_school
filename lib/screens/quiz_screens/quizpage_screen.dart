@@ -21,25 +21,26 @@ class Getjson extends StatelessWidget {
   // and opens the JSON
   setasset() {
     if (langname == "Komplettes Quiz") {
-      assettoload = "assets/quize/komplettesquiz.json";
+      assettoload = "assets/quiz_inhalte/komplettesquiz.json";
     } else if (langname == "Farben") {
-      assettoload = "assets/quize/farbenquiz.json";
+      assettoload = "assets/quiz_inhalte/farbenquiz.json";
     } else if (langname == "Zahlen") {
-      assettoload = "assets/quize/numberquiz.json";
+      assettoload = "assets/quiz_inhalte/numberquiz.json";
     } else if (langname == "Lebensmittel") {
-      assettoload = "assets/quize/lebensmittelquiz.json";
+      assettoload = "assets/quiz_inhalte/lebensmittelquiz.json";
     } else if (langname == "Wochentage") {
-      assettoload = "assets/quize/wochentagequiz.json";
+      assettoload = "assets/quiz_inhalte/wochentagequiz.json";
     } else if (langname == "Konsonanten") {
-      assettoload = "assets/quize/konsonantenquiz.json";
+      assettoload = "assets/quiz_inhalte/konsonantenquiz.json";
     } else if (langname == "Selbstlaute") {
-      assettoload = "assets/quize/selbstlautequiz.json";
+      assettoload = "assets/quiz_inhalte/selbstlautequiz.json";
     } else if (langname == "Häufige Twi Sätze") {
-      assettoload = "assets/quize/haeufigetwisaetzequiz.json";
+      assettoload = "assets/quiz_inhalte/haeufigetwisaetzequiz.json";
     } else if (langname == "Fragewörter und Richtungsangaben") {
-      assettoload = "assets/quize/fragewoerterundrichtungsangabenquiz.json";
+      assettoload =
+      "assets/quiz_inhalte/fragewoerterundrichtungsangabenquiz.json";
     } else if (langname == "Zeitangaben") {
-      assettoload = "assets/quize/zeitangabenquiz.json";
+      assettoload = "assets/quiz_inhalte/zeitangabenquiz.json";
     } else if (langname == "Tiere") {
       assettoload = "assets/quize/tierequiz.json";
     }
@@ -53,7 +54,7 @@ class Getjson extends StatelessWidget {
     // and now we return the FutureBuilder to load and decode JSON
     return FutureBuilder(
       future:
-          DefaultAssetBundle.of(context).loadString(assettoload, cache: false),
+      DefaultAssetBundle.of(context).loadString(assettoload, cache: false),
       builder: (context, snapshot) {
         List mydata = json.decode(snapshot.data.toString());
         if (mydata == null) {
@@ -250,7 +251,7 @@ class _quizpageState extends State<quizpage> {
         minWidth: 200.0,
         height: 45.0,
         shape:
-            RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
+        RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
       ),
     );
   }
@@ -263,17 +264,20 @@ class _quizpageState extends State<quizpage> {
       onWillPop: () {
         return showDialog(
             context: context,
-            builder: (context) => AlertDialog(
+            builder: (context) =>
+                AlertDialog(
                     title: Text('Möchtest du das Quiz beenden?'),
                     actions: <Widget>[
                       RaisedButton(
                         child: Text('Ja'),
-                        onPressed: () =>
-                            Navigator.pushNamed(context, QuizHome.id),
+                        onPressed: () {
+                          Navigator.pushNamed(context, QuizHome.id);
+                        },
                       ),
                       RaisedButton(
-                          child: Text('Nein'),
-                          onPressed: () => Navigator.of(context).pop(false)),
+                        child: Text('Nein'),
+                        onPressed: () => Navigator.of(context).pop(false),
+                      ),
                     ]));
       },
       child: Scaffold(
