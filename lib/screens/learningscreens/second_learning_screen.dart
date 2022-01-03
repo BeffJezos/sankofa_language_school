@@ -239,10 +239,10 @@ class _quizpageState extends State<quizpage> {
                     title: Text('Möchtest du das Quiz beenden?'),
                     actions: <Widget>[
                       RaisedButton(
-                        child: Text('Ja'),
-                        onPressed: () =>
-                            Navigator.pushNamed(context, DrawerScreen.id),
-                      ),
+                          child: Text('Ja'),
+                          onPressed: () {
+                            Navigator.pushNamed(context, HomePage.id);
+                          }),
                       RaisedButton(
                         child: Text('Nein'),
                         onPressed: () => Navigator.of(context).pop(false),
