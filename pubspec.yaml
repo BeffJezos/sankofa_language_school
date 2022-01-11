@@ -65,6 +65,7 @@ flutter:
     - assets/tiere/
     - assets/widgetbilder/
     - images/akwasi.jpg
+    - images/SankofaRichtigesLogo.png
     - assets/images/thesac-sanky.jpg
     - images/launch_image.png
     - assets/images/Lingala.jpeg
@@ -117,8 +118,8 @@ flutter:
     - assets/learning/colours.json
     - assets/learning/consonants.json
     - assets/learning/interrogatives.json
-    - assets/learning/numbers.json
-    - assets/learning/sentences.json
+    - assets/learning/zahlen.json
+    - assets/learning/saetze.json
     - assets/learning/times.json
     - assets/learning/vowels.json
     - assets/learning/weekdays.json

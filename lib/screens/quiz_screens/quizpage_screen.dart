@@ -6,6 +6,7 @@ import 'results_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'quizhome_screen.dart';
+import 'package:pet_ui/screens/quiz_screens/results_screen.dart';
 
 class Getjson extends StatelessWidget {
   // accept the langname as a parameter
@@ -20,7 +21,7 @@ class Getjson extends StatelessWidget {
   // sets the asset to a particular JSON file
   // and opens the JSON
   setasset() {
-    if (langname == "Komplettes Quiz") {
+    if (langname == "Alle Themen") {
       assettoload = "assets/quiz_inhalte/komplettesquiz.json";
     } else if (langname == "Farben") {
       assettoload = "assets/quiz_inhalte/farbenquiz.json";
@@ -38,7 +39,7 @@ class Getjson extends StatelessWidget {
       assettoload = "assets/quiz_inhalte/haeufigetwisaetzequiz.json";
     } else if (langname == "Fragewörter und Richtungsangaben") {
       assettoload =
-      "assets/quiz_inhalte/fragewoerterundrichtungsangabenquiz.json";
+          "assets/quiz_inhalte/fragewoerterundrichtungsangabenquiz.json";
     } else if (langname == "Zeitangaben") {
       assettoload = "assets/quiz_inhalte/zeitangabenquiz.json";
     } else if (langname == "Tiere") {
@@ -54,7 +55,7 @@ class Getjson extends StatelessWidget {
     // and now we return the FutureBuilder to load and decode JSON
     return FutureBuilder(
       future:
-      DefaultAssetBundle.of(context).loadString(assettoload, cache: false),
+          DefaultAssetBundle.of(context).loadString(assettoload, cache: false),
       builder: (context, snapshot) {
         List mydata = json.decode(snapshot.data.toString());
         if (mydata == null) {
@@ -193,8 +194,8 @@ class _quizpageState extends State<quizpage> {
           builder: (context) => Resultpage(marks: marks),
         ));
       }
-      btncolor["a"] = Color.fromRGBO(255, 87, 87, 1);
-      btncolor["b"] = Color.fromRGBO(255, 87, 87, 1);
+      btncolor["a"] = Color.fromRGBO(250, 139, 134, 1);
+      btncolor["b"] = Color.fromRGBO(255, 171, 147, 1);
       disableAnswer = false;
     });
     starttimer();
@@ -251,7 +252,7 @@ class _quizpageState extends State<quizpage> {
         minWidth: 200.0,
         height: 45.0,
         shape:
-        RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
+            RoundedRectangleBorder(borderRadius: BorderRadius.circular(20.0)),
       ),
     );
   }
@@ -264,8 +265,7 @@ class _quizpageState extends State<quizpage> {
       onWillPop: () {
         return showDialog(
             context: context,
-            builder: (context) =>
-                AlertDialog(
+            builder: (context) => AlertDialog(
                     title: Text('Möchtest du das Quiz beenden?'),
                     actions: <Widget>[
                       RaisedButton(

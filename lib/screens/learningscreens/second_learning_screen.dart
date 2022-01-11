@@ -17,13 +17,13 @@ class SecondJson extends StatelessWidget {
 
   SecondJson(this.secondtopicname);
 
-  String assettoload;
+  String secondassettoload;
 
-  setasset() {
+  setsecondasset() {
     if (secondtopicname == "Alphabet") {
-      assettoload = "assets/learning/alphabet.json";
+      secondassettoload = "assets/learning/alphabet.json";
     } else if (secondtopicname == "Zahlen") {
-      assettoload = "assets/learning/numbers.json";
+      secondassettoload = "assets/learning/zahlen.json";
     }
   }
 
@@ -31,14 +31,14 @@ class SecondJson extends StatelessWidget {
   Widget build(BuildContext context) {
     // this function is called before the build so that
     // the string assettoload is avialable to the DefaultAssetBuilder
-    setasset();
+    setsecondasset();
     // and now we return the FutureBuilder to load and decode JSON
     return FutureBuilder(
-      future:
-          DefaultAssetBundle.of(context).loadString(assettoload, cache: false),
+      future: DefaultAssetBundle.of(context)
+          .loadString(secondassettoload, cache: false),
       builder: (context, snapshot) {
-        List mydata = json.decode(snapshot.data.toString());
-        if (mydata == null) {
+        List secondmydata = json.decode(snapshot.data.toString());
+        if (secondmydata == null) {
           return Scaffold(
             body: Row(
               children: [
@@ -52,7 +52,7 @@ class SecondJson extends StatelessWidget {
             ),
           );
         } else {
-          return quizpage(mydata: mydata);
+          return quizpage(mydata: secondmydata);
         }
       },
     );
@@ -269,7 +269,7 @@ class _quizpageState extends State<quizpage> {
                     children: [
                       AnimatedOpacity(
                         opacity: opacity1,
-                        duration: Duration(milliseconds: 10),
+                        duration: Duration(seconds: 1),
                         child: Center(
                           child: Text(
                             mydata[0][i.toString()],

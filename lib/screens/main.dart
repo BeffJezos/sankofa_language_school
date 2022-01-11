@@ -1,19 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:pet_ui/screens/topicscreens/interrogatives.dart';
-import 'package:pet_ui/screens/topicscreens/vowels.dart';
+
 import 'package:splashscreen/splashscreen.dart';
 import 'mainscreens/intro_screen.dart';
 import 'mainscreens/drawer_screen.dart';
-import 'topicscreens/alphabet_screen.dart';
-import 'topicscreens/numbers_screen.dart';
-import 'topicscreens/vowels.dart';
-import 'topicscreens/consonants_screen.dart';
-import 'topicscreens/sentences_screen.dart';
-import 'topicscreens/times_screen.dart';
-import 'topicscreens/weekdays_screen.dart';
-import 'topicscreens/foods_screen.dart';
-import 'topicscreens/colours_screen.dart';
-import 'topicscreens/animals_screen.dart';
+
 import 'mainscreens/about_screen.dart';
 import 'mainscreens/settings_screen.dart';
 import 'mainscreens/account_screen.dart';
@@ -30,17 +20,6 @@ void main() {
       routes: {
         IntroScreen.id: (context) => IntroScreen(),
         HomeScreen.id: (context) => HomeScreen(),
-        Alphabet.id: (context) => Alphabet(),
-        Numbers.id: (context) => Numbers(),
-        Vowels.id: (context) => Vowels(),
-        Consonants.id: (context) => Consonants(),
-        Sentences.id: (context) => Sentences(),
-        Interrogatives.id: (context) => Interrogatives(),
-        Times.id: (context) => Times(),
-        Weekdays.id: (context) => Weekdays(),
-        Foods.id: (context) => Foods(),
-        Colours.id: (context) => Colours(),
-        Animals.id: (context) => Animals(),
         About.id: (context) => About(),
         Settings.id: (context) => Settings(),
         Account.id: (context) => Account(),
@@ -60,12 +39,14 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return new SplashScreen(
-      seconds: 3,
+      seconds: 2,
       navigateAfterSeconds: new HomePage(),
-      image: new Image.asset('images/launch_image.png'),
+      image: new Image.asset(
+        'images/SankofaRichtigesLogo.png',
+      ),
       backgroundColor: Colors.white,
       styleTextUnderTheLoader: new TextStyle(),
-      photoSize: 100.0,
+      photoSize: 200.0,
       useLoader: false,
     );
   }

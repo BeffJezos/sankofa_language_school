@@ -25,7 +25,7 @@ class Json extends StatelessWidget {
     } else if (topicname == "Fragewörter") {
       assettoload = "assets/learning/interrogatives.json";
     } else if (topicname == "Häufige Twi Sätze") {
-      assettoload = "assets/learning/sentences.json";
+      assettoload = "assets/learning/saetze.json";
     } else if (topicname == "Konsonanten") {
       assettoload = "assets/learning/consonants.json";
     } else if (topicname == "Selbstlaute") {
@@ -136,7 +136,7 @@ class _quizpageState extends State<quizpage> {
   }
 
   void buttonfunctionality(String k) {
-    Timer(Duration(seconds: 2), repeataudio);
+    Timer(Duration(seconds: 0), repeataudio);
   }
 
   Widget choicebutton1(String k) {
@@ -169,7 +169,7 @@ class _quizpageState extends State<quizpage> {
   }
 
   void buttonfunctionality2(String k) {
-    Timer(Duration(seconds: 1), nextquestion);
+    Timer(Duration(seconds: 0), nextquestion);
   }
 
   final player = AudioCache();
@@ -207,10 +207,10 @@ class _quizpageState extends State<quizpage> {
   void nextquestion() {
     setState(() {
       if (j < 20) {
-        i = random_array[j];
-        j++;
         opacity1 = 1.0;
         opacity2 = 0.0;
+        i = random_array[j];
+        j++;
         changeOpacityThird();
         changeOpacityFourth();
         player.play(mydata[2][i.toString()]);
@@ -244,9 +244,9 @@ class _quizpageState extends State<quizpage> {
   }
 
   changeOpacityThird() {
-    Future.delayed(Duration(seconds: 1), () {
+    Future.delayed(Duration(seconds: 2), () {
       setState(() {
-        opacity1 = opacity1 == 1.0 ? 1.0 : 0.0;
+        opacity1 = opacity1 == 0.0 ? 1.0 : 0.0;
         opacity1 = opacity1 == 0.0 ? 0.0 : 0.0;
       });
     });
@@ -255,8 +255,8 @@ class _quizpageState extends State<quizpage> {
   changeOpacityFourth() {
     Future.delayed(Duration(seconds: 3), () {
       setState(() {
+        opacity2 = opacity2 == 0.0 ? 1.0 : 1.0;
         opacity2 = opacity2 == 0.0 ? 0.0 : 1.0;
-        opacity2 = opacity2 == 1.0 ? 1.0 : 1.0;
       });
     });
   }

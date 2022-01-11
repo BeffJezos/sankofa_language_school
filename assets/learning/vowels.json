@@ -54,8 +54,8 @@
     "25": "ɔwɔ"
   },
   {
-    "1": "selbstlaute/Etwas auf dem Kopf transportieren.mp3",
-    "2": "selbstlaute/Herz (Organ).mp3",
+    "1": "selbstlaute/etwas transportieren.mp3",
+    "2": "selbstlaute/Herz.mp3",
     "3": "selbstlaute/Zuhause.mp3",
     "4": "selbstlaute/Wunde.mp3",
     "5": "selbstlaute/Menschenmenge.mp3",
@@ -63,11 +63,11 @@
     "7": "selbstlaute/Name.mp3",
     "8": "selbstlaute/Iss.mp3",
     "9": "selbstlaute/Regen.mp3",
-    "10": "selbstlaute/Eichhoernchen.mp3",
+    "10": "selbstlaute/Eichhörnchen.mp3",
     "11": "selbstlaute/Schlange.mp3",
     "12": "selbstlaute/Tiger.mp3",
     "13": "selbstlaute/Mittwoch.mp3",
-    "14": "selbstlaute/Angst haben.mp3",
+    "14": "selbstlaute/Angsthaben.mp3",
     "15": "selbstlaute/Etwas auf dem Kopf transportieren.mp3",
     "16": "selbstlaute/Herz (Organ).mp3",
     "17": "selbstlaute/Zuhause.mp3",
@@ -77,6 +77,7 @@
     "21": "selbstlaute/Name.mp3",
     "22": "selbstlaute/Iss.mp3",
     "23": "selbstlaute/Regen.mp3",
-    "24": "selbstlaute/Eichhoernchen.mp3",
-    "25": "selbstlaute/Schlange.mp3",
-    ]
+    "24": "selbstlaute/Eichhörnchen.mp3",
+    "25": "selbstlaute/Schlange.mp3"
+  }
+]
