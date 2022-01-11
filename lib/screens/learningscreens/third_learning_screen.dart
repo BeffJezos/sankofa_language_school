@@ -5,24 +5,25 @@ import 'dart:math';
 import 'package:pet_ui/screens/main.dart';
 import 'package:pet_ui/screens/mainscreens/alphabetoverview.dart';
 import 'package:pet_ui/screens/mainscreens/drawer_screen.dart';
+import 'package:pet_ui/screens/mainscreens/numbersoverview.dart';
 import 'package:pet_ui/screens/quiz_screens/results_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:pet_ui/screens/mainscreens/home_screen.dart';
 import 'package:audioplayers/audioplayers.dart';
 
-class SecondJson extends StatelessWidget {
+class ThirdJson extends StatelessWidget {
   // accept the langname as a parameter
 
   String secondtopicname;
 
-  SecondJson(this.secondtopicname);
+  ThirdJson(this.secondtopicname);
 
   String secondassettoload;
 
   setsecondasset() {
-    if (secondtopicname == "Alphabet") {
-      secondassettoload = "assets/learning/alphabet.json";
+    if (secondtopicname == "Zahlen") {
+      secondassettoload = "assets/learning/numbers.json";
     }
   }
 
@@ -260,7 +261,7 @@ class _quizpageState extends State<quizpage> {
                   SizedBox(width: 40),
                   FlatButton(
                     onPressed: () {
-                      Navigator.pushNamed(context, AlphabetOverview.id);
+                      Navigator.pushNamed(context, NumbersOverview.id);
                     },
                     child: Stack(
                       children: [

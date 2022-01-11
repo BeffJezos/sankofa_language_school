@@ -164,7 +164,16 @@ class AlphabetRectangleWithText extends StatelessWidget {
       height: 60,
       child: Container(
         decoration: BoxDecoration(
-          color: Color(0xFFf1faee),
+          gradient: LinearGradient(
+            begin: Alignment.topLeft,
+            end: Alignment.topRight,
+            colors: [
+              Color.fromRGBO(108, 127, 227, 1),
+              Color.fromRGBO(104, 118, 226, 1),
+              Color.fromRGBO(97, 105, 222, 1),
+              Color.fromRGBO(92, 96, 222, 1),
+            ],
+          ),
           borderRadius: BorderRadius.all(
             Radius.circular(14),
           ),
@@ -178,7 +187,58 @@ class AlphabetRectangleWithText extends StatelessWidget {
               functionality,
               textAlign: TextAlign.center,
               style: TextStyle(
-                  color: Colors.black,
+                  color: Colors.white30,
+                  fontSize: 14.0,
+                  fontWeight: FontWeight.bold),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class AlphabetRectangleWithTextt extends StatelessWidget {
+  AlphabetRectangleWithTextt({
+    @required this.functionality,
+    @required this.input,
+  });
+
+  final String functionality;
+  final String input;
+  final player = AudioCache();
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      width: 60,
+      height: 60,
+      child: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topLeft,
+            end: Alignment.topRight,
+            colors: [
+              Color.fromRGBO(108, 127, 227, 1),
+              Color.fromRGBO(104, 118, 226, 1),
+              Color.fromRGBO(97, 105, 222, 1),
+              Color.fromRGBO(92, 96, 222, 1),
+            ],
+          ),
+          borderRadius: BorderRadius.all(
+            Radius.circular(14),
+          ),
+        ),
+        child: Center(
+          child: FlatButton(
+            onPressed: () {
+              player.play('zahlen/$input.mp3');
+            },
+            child: Text(
+              functionality,
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                  color: Colors.white,
                   fontSize: 14.0,
                   fontWeight: FontWeight.bold),
             ),

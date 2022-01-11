@@ -10,6 +10,8 @@ import 'mainscreens/account_screen.dart';
 import 'mainscreens/home_screen.dart';
 import 'quiz_screens/quizhome_screen.dart';
 import 'learningscreens/learning_screen.dart';
+import 'mainscreens/alphabetoverview.dart';
+import 'mainscreens/numbersoverview.dart';
 
 void main() {
   runApp(
@@ -25,6 +27,8 @@ void main() {
         Account.id: (context) => Account(),
         QuizHome.id: (context) => QuizHome(),
         HomePage.id: (context) => HomePage(),
+        AlphabetOverview.id: (context) => AlphabetOverview(),
+        NumbersOverview.id: (context) => NumbersOverview(),
       },
     ),
   );

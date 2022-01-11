@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:pet_ui/screens/quiz_screens/quizhome_screen.dart';
 import 'package:pet_ui/screens/learningscreens/learning_screen.dart';
 import 'package:pet_ui/screens/learningscreens/second_learning_screen.dart';
+import 'package:pet_ui/screens/learningscreens/third_learning_screen.dart';
 import 'package:meta/meta.dart';
 import 'package:flutter/foundation.dart';
 import 'package:auto_size_text/auto_size_text.dart';
@@ -17,6 +18,8 @@ import 'package:pet_ui/screens/mainscreens/settings_screen.dart';
 import 'package:pet_ui/customcreations/progressBar.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
 import 'package:pet_ui/screens/quiz_screens/quizhome_screen.dart';
+import 'package:pet_ui/screens/mainscreens/alphabetoverview.dart';
+import 'package:pet_ui/screens/mainscreens/numbersoverview.dart';
 
 class HomeScreen extends StatefulWidget {
   static const String id = 'home_screen';
@@ -208,6 +211,126 @@ class _HomeScreenState extends State<HomeScreen> {
                             // this name will be used to open a particular JSON file
                             // for a particular language
                             builder: (context) => SecondJson(secondtopicname),
+                          ));
+                        },
+                        child: Padding(
+                          padding: const EdgeInsets.fromLTRB(0, 16, 0, 0),
+                          child: Align(
+                            alignment: Alignment.centerLeft,
+                            child: AutoSizeText(
+                              items,
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 20),
+                              maxLines: 2,
+                            ),
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Align(
+                          alignment: Alignment.bottomLeft,
+                          child: Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: AutoSizeText(
+                              descriptions,
+                              style: TextStyle(color: Colors.white),
+                              maxLines: 2,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.only(
+                      topRight: Radius.circular(60),
+                      topLeft: Radius.circular(10),
+                      bottomRight: Radius.circular(10),
+                      bottomLeft: Radius.circular(10),
+                    ),
+                    gradient: LinearGradient(
+                      begin: Alignment.topLeft,
+                      end: Alignment.topRight,
+                      colors: [
+                        colours1,
+                        colours2,
+                        colours3,
+                        colours4,
+                      ],
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  @override
+  Widget thirdcard(
+      String secondtopicname,
+      String titel,
+      String items,
+      String pictures,
+      String descriptions,
+      Color colours1,
+      Color colours2,
+      Color colours3,
+      Color colours4) {
+    return Expanded(
+      child: Container(
+        child: SingleChildScrollView(
+          child: Column(
+            children: [
+              Align(
+                alignment: Alignment.topLeft,
+                child: Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: Text(
+                    '$titel',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 200,
+                width: 180,
+                child: Container(
+                  height: 200,
+                  width: 180,
+                  margin: EdgeInsets.fromLTRB(4, 0, 4, 0),
+                  child: Stack(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Align(
+                          alignment: Alignment.topLeft,
+                          child: Container(
+                            child: Image.asset(
+                              pictures,
+                            ),
+                            height: 70,
+                            width: 70,
+                          ),
+                        ),
+                      ),
+                      FlatButton(
+                        height: 90,
+                        minWidth: 90,
+                        onPressed: () {
+                          Navigator.of(context)
+                              .pushReplacement(MaterialPageRoute(
+                            // in changelog 1 we will pass the langname name to the other widget class
+                            // this name will be used to open a particular JSON file
+                            // for a particular language
+                            builder: (context) => ThirdJson(secondtopicname),
                           ));
                         },
                         child: Padding(
@@ -628,7 +751,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   colours3[0],
                                   colours4[0],
                                 ),
-                                secondcard(
+                                thirdcard(
                                   "Zahlen",
                                   titel[1],
                                   items[7],
