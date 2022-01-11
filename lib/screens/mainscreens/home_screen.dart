@@ -628,7 +628,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   colours3[0],
                                   colours4[0],
                                 ),
-                                card(
+                                secondcard(
                                   "Zahlen",
                                   titel[1],
                                   items[7],

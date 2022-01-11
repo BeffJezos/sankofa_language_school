@@ -24,8 +24,8 @@ class Json extends StatelessWidget {
       assettoload = "assets/learning/colours.json";
     } else if (topicname == "Fragewörter") {
       assettoload = "assets/learning/interrogatives.json";
-    } else if (topicname == "Häufige Twi Sätze") {
-      assettoload = "assets/learning/saetze.json";
+    } else if (topicname == "Häufige Twi-Sätze") {
+      assettoload = "assets/learning/sentences.json";
     } else if (topicname == "Konsonanten") {
       assettoload = "assets/learning/consonants.json";
     } else if (topicname == "Selbstlaute") {

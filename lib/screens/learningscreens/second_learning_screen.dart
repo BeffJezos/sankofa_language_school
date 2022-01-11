@@ -23,7 +23,7 @@ class SecondJson extends StatelessWidget {
     if (secondtopicname == "Alphabet") {
       secondassettoload = "assets/learning/alphabet.json";
     } else if (secondtopicname == "Zahlen") {
-      secondassettoload = "assets/learning/zahlen.json";
+      secondassettoload = "assets/learning/numbers.json";
     }
   }
 
